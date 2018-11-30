@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        style="@style/container_master">
+        <ImageView
+            style="@style/banner"
+            android:id="@+id/imageView" />
+
+        <View style="@style/divider" />
+
+        <TextView
+            style="@style/header_title"
+            android:drawableLeft="@drawable/gas_station_icon"
+            android:text="@string/header_gas_station" />
+
+        <View style="@style/divider" />
+
+        <LinearLayout style="@style/container_row">
+            <TextView
+                style="@style/header_subtitle"
+                android:text="@string/header_gasoline_price" />
+
+            <TextView
+                style="@style/header_subtitle"
+                android:text="@string/header_ethanol_price" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/container_row">
+
+            <EditText
+                android:hint="@string/hint_gasoline"
+                android:nextFocusDown="@+id/etEthanolPrice"
+                style="@style/input_number_decimal" android:id="@+id/etGasPrice"/>
+
+            <EditText
+                style="@style/input_number_decimal"
+                android:nextFocusDown="@+id/etGasAverage"
+                android:hint="@string/hint_ethanol" android:id="@+id/etEthanolPrice"/>
+        </LinearLayout>
+
+        <View style="@style/divider"/>
+
+        <TextView
+            android:text="@string/header_average"
+            style="@style/header_subtitle"
+            android:drawableLeft="@drawable/car_icon" />
+
+        <View style="@style/divider"/>
+
+        <LinearLayout style="@style/container_row">
+
+            <TextView
+                android:text="@string/header_average_gasoline"
+                style="@style/header_title"/>
+
+            <TextView
+                android:text="@string/header_average_ethanol"
+                style="@style/header_subtitle"/>
+        </LinearLayout>
+
+        <LinearLayout style="@style/container_row">
+
+            <EditText
+                style="@style/input_number_decimal"
+                android:nextFocusDown="@+id/etEthanolAverage"
+                android:hint="@string/hint_average_gasoline" android:id="@+id/etGasAverage"/>
+
+            <EditText
+                style="@style/input_number_decimal"
+                android:hint="@string/hint_average_ethanol" android:id="@+id/etEthanolAverage"/>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/calculate" android:id="@+id/btCalculate"/>
+
+        <View style="@style/divider"/>
+
+    </LinearLayout>
+</ScrollView>

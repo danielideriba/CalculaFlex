@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        style="@style/container_master">
+
+
+        <ImageView
+            style="@style/banner"/>
+
+        <View style="@style/divider"/>
+
+        <TextView
+            style="@style/header_title"
+            android:drawableStart="@drawable/analysis_icon"
+            android:text="@string/header_suggestion"/>
+
+        <View style="@style/divider"/>
+
+        <TextView
+            style="@style/header_title"
+            tools:text="Etanol"
+            android:textSize="48sp"
+            android:gravity="center"
+            android:id="@+id/tvSuggestion"/>
+
+
+        <TextView
+            android:id="@+id/tvFuelRatio"
+            style="@style/header_subtitle"
+            tools:text="@string/label_fuel_ratio"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            android:gravity="center"/>
+
+        <View style="@style/divider"/>
+
+        <TextView
+            android:text="@string/header_spent"
+            style="@style/header_title"
+            android:drawableLeft="@drawable/coins_icon" />
+
+        <View style="@style/divider"/>
+
+        <LinearLayout style="@style/container_row">
+
+            <TextView
+                style="@style/value_spent_footer"
+                tools:text="0.30" android:id="@+id/tvGasAverageResult"/>
+
+            <TextView
+                style="@style/value_spent_footer"
+                tools:text="0.30" android:id="@+id/tvEthanolAverageResult"/>
+        </LinearLayout>
+
+        <LinearLayout style="@style/container_row">
+
+            <TextView
+                style="@style/label_spent_footer"
+                android:text="@string/gasoline"
+                />
+
+            <TextView
+                style="@style/label_spent_footer"
+                android:text="@string/ethanol"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
